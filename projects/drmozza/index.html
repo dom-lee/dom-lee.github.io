@@ -350,13 +350,38 @@ Entity Relationship Diagram 내가 맡은 역할  장바구니 엔드포인트  
 
   </div>
   <footer class="post-footer">
-  </footer><script src="https://utteranc.es/client.js"
-        repo="dom-lee/dom-lee.github.io"
-        issue-term="pathname"
-        label="✨💬✨"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+  </footer><div id='uttComments'>
+  <script id="uttLight"
+          src="https://utteranc.es/client.js"
+          repo="dom-lee/dom-lee.github.io"
+          issue-term="pathname"
+          label="✨💬✨"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <script id="uttDark"
+          src="https://utteranc.es/client.js"
+          repo="dom-lee/dom-lee.github.io"
+          issue-term="pathname"
+          label="✨💬✨"
+          theme="github-dark"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+<script>
+  const savedTheme = localStorage.getItem("pref-theme");
+  var uttLight = document.getElementById("uttLight");
+  var uttDark = document.getElementById("uttDark");
+
+
+  if(savedTheme === "dark"){
+    uttLight.parentNode.removeChild(uttLight);
+  } else {
+    uttDark.parentNode.removeChild(uttDark);
+  }
 </script>
 
 </article>
